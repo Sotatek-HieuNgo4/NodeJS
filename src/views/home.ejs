@@ -1,0 +1,72 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="topnav">
+        <a href="/" class="active">Home</a>
+        <a href="/create">Create User</a>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Name</th>
+                <th>City</th>
+                <th>Actions</th>
+            </tr>
+            <% for(let i=0; i < users.length; i++) { %>
+                <tr>
+                    <td>
+                        <%= users[i].id %>
+                    </td>
+                    <td>
+                        <%= users[i].email %>
+                    </td>
+                    <td>
+                        <%= users[i].name %>
+                    </td>
+                    <td>
+                        <%= users[i].city %>
+                    </td>
+                    <td>
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </td>
+                </tr>
+                <% } %>
+
+
+        </table>
+    </div>
+    <!-- <div>
+        <form action="/create-user" method="post">
+            <fieldset>
+                <div>
+                    <label>Email: </label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div>
+                    <label>Name: </label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div>
+                    <label>City: </label>
+                    <input type="text" name="city" id="city">
+                </div>
+                <br>
+                <div>
+                    <input type="submit" value="Submit">
+                </div>
+            </fieldset>
+        </form>
+    </div> -->
+</body>
+
+</html>
