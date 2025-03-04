@@ -150,3 +150,7 @@ tr:hover {
     background-color: #d4edda;
     transition: 0.3s;
 }
+
+.hidden {
+    display: none;
+}
